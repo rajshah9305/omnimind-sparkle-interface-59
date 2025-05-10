@@ -10,13 +10,21 @@ import About from "./pages/About";
 import Help from "./pages/Help";
 import NotFound from "./pages/NotFound";
 
-const queryClient = new QueryClient();
+// Configure the query client with our styled toast notifications
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      retry: false,
+    },
+  },
+});
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
-      <Sonner />
+      <Sonner theme="dark" position="top-right" />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
