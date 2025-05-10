@@ -1,4 +1,5 @@
 
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -105,6 +106,16 @@ export default {
                         transform: 'translateY(0)'
                     }
                 },
+                'slide-in': {
+                    '0%': { 
+                        opacity: '0',
+                        transform: 'translateX(20px)'
+                    },
+                    '100%': { 
+                        opacity: '1',
+                        transform: 'translateX(0)'
+                    }
+                },
                 'pulse-ring': {
                     '0%': { 
                         transform: 'scale(0.8)',
@@ -145,12 +156,17 @@ export default {
                     '0%': { transform: 'scaleY(0.6)' },
                     '50%': { transform: 'scaleY(1)' },
                     '100%': { transform: 'scaleY(0.6)' }
+                },
+                'shimmer': {
+                    '0%': { backgroundPosition: '-500px 0' },
+                    '100%': { backgroundPosition: '500px 0' }
                 }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
                 'fade-in': 'fade-in 0.3s ease-out',
+                'slide-in': 'slide-in 0.4s ease-out',
                 'pulse-ring': 'pulse-ring 1.5s cubic-bezier(0.24, 0, 0.38, 1) infinite',
                 'bounce-soft': 'bounce-soft 1.5s infinite',
                 'thinking': 'thinking 1.5s ease-in-out infinite',
@@ -159,9 +175,15 @@ export default {
                 'wave-2': 'wave 1.2s linear infinite 0.15s',
                 'wave-3': 'wave 1.2s linear infinite 0.3s',
                 'wave-4': 'wave 1.2s linear infinite 0.45s',
-                'wave-5': 'wave 1.2s linear infinite 0.6s'
-			}
+                'wave-5': 'wave 1.2s linear infinite 0.6s',
+                'shimmer': 'shimmer 2s linear infinite'
+			},
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+            },
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+

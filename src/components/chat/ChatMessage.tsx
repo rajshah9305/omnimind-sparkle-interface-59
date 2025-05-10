@@ -24,7 +24,7 @@ const ChatMessage: React.FC<MessageProps> = ({
   if (isLoading && type === 'ai') {
     return (
       <div className="ai-bubble">
-        <Avatar className="w-8 h-8 bg-omni-secondary text-white">
+        <Avatar className="w-8 h-8 bg-gradient-to-br from-omni-primary to-omni-secondary text-white shadow-sm">
           <span>AI</span>
         </Avatar>
         <div>
@@ -42,13 +42,20 @@ const ChatMessage: React.FC<MessageProps> = ({
   return (
     <div className={`message-bubble ${type === 'user' ? 'user-bubble' : 'ai-bubble'}`}>
       {type === 'ai' && (
-        <Avatar className="w-8 h-8 bg-omni-secondary text-white">
+        <Avatar className="w-8 h-8 bg-gradient-to-br from-omni-primary to-omni-secondary text-white shadow-sm">
           <span>AI</span>
         </Avatar>
       )}
-      <div>
-        <div className="message-content">{content}</div>
-        <span className="text-xs text-gray-500 mt-1 block">{formattedTime}</span>
+      <div className="flex-1">
+        <div className="message-content">
+          {content.split('\n').map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              {index < content.split('\n').length - 1 && <br />}
+            </React.Fragment>
+          ))}
+        </div>
+        <span className="text-xs text-gray-500 mt-2 block">{formattedTime}</span>
       </div>
     </div>
   );

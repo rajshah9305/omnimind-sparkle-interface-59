@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -103,27 +104,27 @@
 
 @layer components {
   .chat-container {
-    @apply w-full max-w-4xl mx-auto h-[calc(100vh-8rem)] flex flex-col bg-white rounded-xl shadow-md overflow-hidden;
+    @apply w-full max-w-4xl mx-auto h-[calc(100vh-8rem)] flex flex-col bg-white rounded-xl shadow-md overflow-hidden border border-gray-100;
   }
 
   .chat-messages {
-    @apply flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth;
+    @apply flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth bg-gradient-to-b from-white to-gray-50;
   }
 
   .message-bubble {
-    @apply rounded-2xl px-4 py-3 max-w-[80%] animate-fade-in;
+    @apply rounded-2xl px-4 py-3 max-w-[80%] animate-fade-in shadow-sm;
   }
 
   .user-bubble {
-    @apply ml-auto bg-omni-bubbleUser text-omni-dark;
+    @apply ml-auto bg-omni-bubbleUser text-omni-dark border border-purple-100;
   }
 
   .ai-bubble {
-    @apply mr-auto bg-omni-bubbleAI text-gray-800 flex items-start gap-3;
+    @apply mr-auto bg-omni-bubbleAI text-gray-800 flex items-start gap-3 border border-gray-100;
   }
 
   .input-container {
-    @apply p-4 border-t border-gray-200;
+    @apply p-4 border-t border-gray-200 bg-white;
   }
 
   .input-field {
@@ -151,7 +152,7 @@
   }
   
   .settings-panel {
-    @apply absolute top-16 right-4 bg-white rounded-lg shadow-lg p-4 w-64 z-10 border border-gray-200;
+    @apply absolute top-16 right-4 bg-white rounded-lg shadow-lg p-4 w-64 z-10 border border-gray-200 animate-slide-in;
   }
 
   .thinking-indicator {
@@ -165,6 +166,14 @@
   .float-button {
     @apply rounded-full bg-omni-primary text-white p-3 hover:bg-omni-secondary transition-colors shadow-lg animate-float;
   }
+  
+  .shimmer {
+    @apply relative overflow-hidden;
+  }
+  
+  .shimmer::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer;
+  }
 }
 
 .scrollbar-hide {
@@ -175,3 +184,17 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Custom scrollbar for browsers that support it */
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full hover:bg-omni-primary transition-colors;
+}
+
