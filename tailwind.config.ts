@@ -1,4 +1,5 @@
 
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -54,13 +55,13 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
                 omni: {
-                    primary: '#C41E3A',  // Changed to rose red
-                    secondary: '#8B0000', // Dark red
-                    accent: '#FFE4E1',    // Misty rose
-                    light: '#FFF0F5',     // Lavender blush
-                    dark: '#1A0000',      // Very dark red/black
-                    bubbleUser: '#FFF0F5',
-                    bubbleAI: '#F8F8FF'
+                    primary: '#7E69AB',
+                    secondary: '#9b87f5',
+                    accent: '#D6BCFA',
+                    light: '#E5DEFF',
+                    dark: '#1A1F2C',
+                    bubbleUser: '#E5DEFF',
+                    bubbleAI: '#F6F6F7'
                 },
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -180,10 +181,9 @@ export default {
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                 'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-                'roses-dark': "url('/rose-background-dark.png')",
-                'roses-light': "url('/rose-background-light.png')",
             },
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
