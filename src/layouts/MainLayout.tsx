@@ -24,9 +24,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 
   return (
     <div className="min-h-screen bg-main-background bg-cover bg-center bg-fixed">
-      <div className="min-h-screen backdrop-blur-sm bg-black/40 transition-all duration-300">
-        <header className="py-4 px-6 flex justify-between items-center backdrop-blur-md bg-black/30 sticky top-0 z-20 border-b border-white/10">
-          <Link to="/" className="flex items-center gap-2">
+      <div className="min-h-screen backdrop-blur-[2px] bg-black/20 transition-all duration-300">
+        <header className="py-3 px-6 flex justify-between items-center backdrop-blur-md bg-black/40 sticky top-0 z-20 border-b border-white/10 shadow-md">
+          <Link to="/" className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-omni-primary to-omni-secondary flex items-center justify-center text-white font-bold text-xl shadow-md">
               O
             </div>
@@ -132,7 +132,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           {children}
         </main>
         
-        <footer className="py-6 bg-black/50 backdrop-blur-md border-t border-white/10">
+        <footer className="py-4 bg-black/50 backdrop-blur-md border-t border-white/10">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-sm text-gray-300">© 2025 OmniMind AI Assistant. All rights reserved.</p>

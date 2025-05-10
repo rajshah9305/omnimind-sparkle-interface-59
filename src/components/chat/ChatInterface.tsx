@@ -110,9 +110,9 @@ const ChatInterface: React.FC = () => {
   };
 
   return (
-    <div className="chat-container relative h-[70vh]">
-      {/* Header */}
-      <div className="p-3 border-b border-white/10 bg-black/50 backdrop-blur-md flex justify-between items-center">
+    <div className="chat-container relative h-[50vh]">
+      {/* Header - More compact */}
+      <div className="p-2 border-b border-white/10 bg-black/60 backdrop-blur-md flex justify-between items-center">
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 bg-green-500 rounded-full"></div>
           <h2 className="font-medium text-white text-sm">OmniMind Assistant</h2>
@@ -121,19 +121,19 @@ const ChatInterface: React.FC = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="h-7 w-7 text-gray-300 hover:text-omni-primary"
+            className="h-6 w-6 text-gray-300 hover:text-omni-primary"
             onClick={() => console.log('Voice output toggled')}
           >
-            <Volume2 size={16} />
+            <Volume2 size={14} />
             <span className="sr-only">Toggle voice</span>
           </Button>
           <Button
             variant="ghost"
             size="icon"
-            className="h-7 w-7 text-gray-300 hover:text-omni-primary"
+            className="h-6 w-6 text-gray-300 hover:text-omni-primary"
             onClick={() => setShowSettings(!showSettings)}
           >
-            <Settings size={16} />
+            <Settings size={14} />
             <span className="sr-only">Settings</span>
           </Button>
         </div>
@@ -141,8 +141,8 @@ const ChatInterface: React.FC = () => {
         {showSettings && <SettingsPanel onClose={() => setShowSettings(false)} />}
       </div>
 
-      {/* Messages Area */}
-      <div className="chat-messages scrollbar-hide bg-gradient-to-b from-black/40 to-black/60 backdrop-blur-md">
+      {/* Messages Area - More compact */}
+      <div className="chat-messages scrollbar-hide bg-gradient-to-b from-black/20 to-black/40 backdrop-blur-md">
         {messages.map((msg) => (
           <ChatMessage
             key={msg.id}
