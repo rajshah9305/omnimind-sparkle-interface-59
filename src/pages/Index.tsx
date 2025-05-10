@@ -2,7 +2,7 @@
 import React from 'react';
 import MainLayout from '../layouts/MainLayout';
 import ChatInterface from '../components/chat/ChatInterface';
-import { Rose } from 'lucide-react';
+import { Flower } from 'lucide-react';
 
 const Index: React.FC = () => {
   return (
@@ -11,7 +11,7 @@ const Index: React.FC = () => {
         <div className="max-w-4xl w-full mx-auto mb-10 text-center">
           <div className="inline-block mb-4 px-4 py-2 rounded-full bg-black/30 backdrop-blur-md text-white font-semibold text-sm animate-bounce-soft border border-white/10">
             <div className="flex items-center gap-2">
-              <Rose className="h-4 w-4 text-omni-primary" />
+              <Flower className="h-4 w-4 text-omni-primary" />
               <span>Your Personal AI Assistant</span>
             </div>
           </div>

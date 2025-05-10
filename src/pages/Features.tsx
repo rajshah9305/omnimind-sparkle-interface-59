@@ -1,7 +1,7 @@
 
 import React from 'react';
 import MainLayout from '../layouts/MainLayout';
-import { MessageSquare, BookOpen, Image, Rose } from 'lucide-react';
+import { MessageSquare, BookOpen, Image, Flower } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ const Features: React.FC = () => {
         <div className="mb-10 text-center">
           <div className="inline-block mb-4 px-4 py-2 rounded-full bg-black/30 backdrop-blur-md text-white font-semibold text-sm animate-bounce-soft border border-white/10">
             <div className="flex items-center gap-2">
-              <Rose className="h-4 w-4 text-omni-primary" />
+              <Flower className="h-4 w-4 text-omni-primary" />
               <span>Explore Our Features</span>
             </div>
           </div>
