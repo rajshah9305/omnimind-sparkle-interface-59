@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Settings, HelpCircle, Star, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -23,8 +22,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   };
 
   return (
-    <div className="min-h-screen bg-roses-light bg-cover bg-center bg-fixed">
-      <div className="min-h-screen backdrop-blur-sm bg-white/30">
+    <div className="min-h-screen bg-roses-dark bg-cover bg-center bg-fixed">
+      <div className="min-h-screen backdrop-blur-sm bg-black/30">
         <header className="py-4 px-6 flex justify-between items-center backdrop-blur-md bg-black/50 sticky top-0 z-20 border-b border-white/10">
           <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-omni-primary to-omni-secondary flex items-center justify-center text-white font-bold text-xl shadow-md">
