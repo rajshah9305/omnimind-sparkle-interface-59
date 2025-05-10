@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+                omni: {
+                    primary: '#7E69AB',
+                    secondary: '#9b87f5',
+                    accent: '#D6BCFA',
+                    light: '#E5DEFF',
+                    dark: '#1A1F2C',
+                    bubbleUser: '#E5DEFF',
+                    bubbleAI: '#F6F6F7'
+                },
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +94,61 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'pulse-ring': {
+                    '0%': { 
+                        transform: 'scale(0.8)',
+                        opacity: '0.8'
+                    },
+                    '100%': { 
+                        transform: 'scale(1.3)',
+                        opacity: '0'
+                    }
+                },
+                'bounce-soft': {
+                    '0%, 100%': {
+                        transform: 'translateY(0)'
+                    },
+                    '50%': {
+                        transform: 'translateY(-10%)'
+                    }
+                },
+                'thinking': {
+                    '0%, 100%': {
+                        transform: 'scale(0.8)', 
+                        opacity: '0.5'
+                    },
+                    '50%': {
+                        transform: 'scale(1.2)', 
+                        opacity: '1'
+                    }
+                },
+                'float': {
+                    '0%, 100%': {
+                        transform: 'translateY(0)'
+                    },
+                    '50%': {
+                        transform: 'translateY(-5px)'
+                    }
+                },
+                'wave': {
+                    '0%': { transform: 'scaleY(0.6)' },
+                    '50%': { transform: 'scaleY(1)' },
+                    '100%': { transform: 'scaleY(0.6)' }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'pulse-ring': 'pulse-ring 1.5s cubic-bezier(0.24, 0, 0.38, 1) infinite',
+                'bounce-soft': 'bounce-soft 1.5s infinite',
+                'thinking': 'thinking 1.5s ease-in-out infinite',
+                'float': 'float 3s ease-in-out infinite',
+                'wave-1': 'wave 1.2s linear infinite',
+                'wave-2': 'wave 1.2s linear infinite 0.15s',
+                'wave-3': 'wave 1.2s linear infinite 0.3s',
+                'wave-4': 'wave 1.2s linear infinite 0.45s',
+                'wave-5': 'wave 1.2s linear infinite 0.6s'
 			}
 		}
 	},
