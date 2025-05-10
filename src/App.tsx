@@ -4,7 +4,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
 import Index from "./pages/Index";
 import Features from "./pages/Features";
 import About from "./pages/About";
@@ -22,20 +21,12 @@ const queryClient = new QueryClient({
 });
 
 const App = () => {
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
-
-  // Check user's preferred color scheme
-  useEffect(() => {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(prefersDark ? 'dark' : 'light');
-  }, []);
-
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <Sonner theme={theme} position="top-right" />
-        <div className={theme}>
+        <Sonner theme="dark" position="top-right" />
+        <div className="dark">
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />

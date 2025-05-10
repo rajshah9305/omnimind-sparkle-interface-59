@@ -7,18 +7,18 @@ import { Flower } from 'lucide-react';
 const Index: React.FC = () => {
   return (
     <MainLayout>
-      <div className="flex flex-col items-center">
-        <div className="max-w-4xl w-full mx-auto mb-10 text-center">
-          <div className="inline-block mb-4 px-4 py-2 rounded-full bg-black/30 backdrop-blur-md text-white font-semibold text-sm animate-bounce-soft border border-white/10">
+      <div className="flex flex-col items-center min-h-[85vh]">
+        <div className="w-full max-w-5xl mx-auto mb-14 text-center">
+          <div className="inline-block mb-6 px-4 py-2 rounded-full bg-black/30 backdrop-blur-md text-white font-semibold text-sm animate-bounce-soft border border-white/10">
             <div className="flex items-center gap-2">
               <Flower className="h-4 w-4 text-omni-primary" />
               <span>Your Personal AI Assistant</span>
             </div>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-omni-accent">
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-omni-accent glow-text">
             Meet OmniMind
           </h2>
-          <p className="text-white max-w-2xl mx-auto text-lg leading-relaxed mb-6 text-shadow">
+          <p className="text-white max-w-2xl mx-auto text-lg leading-relaxed mb-8 text-shadow">
             An advanced AI assistant that understands text, voice, and images.
             Ask anything, share your thoughts, or upload images for analysis.
           </p>
@@ -39,7 +39,7 @@ const Index: React.FC = () => {
           </div>
         </div>
         
-        <div className="w-full max-w-4xl">
+        <div className="w-full max-w-3xl">
           <ChatInterface />
         </div>
       </div>

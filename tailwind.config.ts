@@ -54,7 +54,7 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
                 omni: {
-                    primary: '#C41E3A',  // Changed to rose red
+                    primary: '#C41E3A',  // Rose red
                     secondary: '#8B0000', // Dark red
                     accent: '#FFE4E1',    // Misty rose
                     light: '#FFF0F5',     // Lavender blush
@@ -159,6 +159,14 @@ export default {
                 'shimmer': {
                     '0%': { backgroundPosition: '-500px 0' },
                     '100%': { backgroundPosition: '500px 0' }
+                },
+                'glow': {
+                    '0%, 100%': { 
+                        textShadow: '0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5)' 
+                    },
+                    '50%': { 
+                        textShadow: '0 0 15px rgba(255, 255, 255, 0.9), 0 0 25px rgba(255, 255, 255, 0.7)' 
+                    }
                 }
 			},
 			animation: {
@@ -175,7 +183,8 @@ export default {
                 'wave-3': 'wave 1.2s linear infinite 0.3s',
                 'wave-4': 'wave 1.2s linear infinite 0.45s',
                 'wave-5': 'wave 1.2s linear infinite 0.6s',
-                'shimmer': 'shimmer 2s linear infinite'
+                'shimmer': 'shimmer 2s linear infinite',
+                'glow': 'glow 2s ease-in-out infinite'
 			},
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

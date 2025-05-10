@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Settings, HelpCircle, Star, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
@@ -11,18 +11,6 @@ interface MainLayoutProps {
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
-  
-  // Check user's preferred color scheme
-  useEffect(() => {
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(prefersDark ? 'dark' : 'light');
-  }, []);
-  
-  // Toggle theme
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
   
   // Helper function to determine if a link is active
   const isActive = (path: string) => {
@@ -35,9 +23,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   };
 
   return (
-    <div className="min-h-screen bg-main-background bg-cover bg-center bg-fixed transition-all duration-300">
-      <div className="min-h-screen backdrop-blur-sm bg-black/50 transition-all duration-300">
-        <header className="py-4 px-6 flex justify-between items-center backdrop-blur-md bg-black/50 sticky top-0 z-20 border-b border-white/10 transition-all duration-300">
+    <div className="min-h-screen bg-main-background bg-cover bg-center bg-fixed">
+      <div className="min-h-screen backdrop-blur-sm bg-black/40 transition-all duration-300">
+        <header className="py-4 px-6 flex justify-between items-center backdrop-blur-md bg-black/30 sticky top-0 z-20 border-b border-white/10">
           <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-omni-primary to-omni-secondary flex items-center justify-center text-white font-bold text-xl shadow-md">
               O
@@ -86,14 +74,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           </div>
           
           <div className="flex items-center gap-2">
-            <Button 
-              variant="ghost" 
-              className="rounded-full w-10 h-10 p-0 flex items-center justify-center bg-white/10 text-white"
-              onClick={toggleTheme}
-            >
-              {theme === 'dark' ? '☀️' : '🌙'}
-            </Button>
-            
             <Button
               variant="outline"
               className="border-omni-primary bg-black/30 text-white hover:bg-omni-primary/20 transition-all duration-300"
@@ -152,7 +132,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           {children}
         </main>
         
-        <footer className="py-6 bg-black/50 backdrop-blur-md border-t border-white/10 transition-all duration-300">
+        <footer className="py-6 bg-black/50 backdrop-blur-md border-t border-white/10">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-sm text-gray-300">© 2025 OmniMind AI Assistant. All rights reserved.</p>

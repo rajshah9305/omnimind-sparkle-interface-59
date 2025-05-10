@@ -110,30 +110,30 @@ const ChatInterface: React.FC = () => {
   };
 
   return (
-    <div className="chat-container relative">
+    <div className="chat-container relative h-[70vh]">
       {/* Header */}
-      <div className="p-4 border-b border-white/10 bg-black/50 backdrop-blur-md flex justify-between items-center">
+      <div className="p-3 border-b border-white/10 bg-black/50 backdrop-blur-md flex justify-between items-center">
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-          <h2 className="font-medium text-white">OmniMind Assistant</h2>
+          <h2 className="font-medium text-white text-sm">OmniMind Assistant</h2>
         </div>
         <div className="flex gap-2">
           <Button
             variant="ghost"
             size="icon"
-            className="h-8 w-8 text-gray-300 hover:text-omni-primary"
+            className="h-7 w-7 text-gray-300 hover:text-omni-primary"
             onClick={() => console.log('Voice output toggled')}
           >
-            <Volume2 size={18} />
+            <Volume2 size={16} />
             <span className="sr-only">Toggle voice</span>
           </Button>
           <Button
             variant="ghost"
             size="icon"
-            className="h-8 w-8 text-gray-300 hover:text-omni-primary"
+            className="h-7 w-7 text-gray-300 hover:text-omni-primary"
             onClick={() => setShowSettings(!showSettings)}
           >
-            <Settings size={18} />
+            <Settings size={16} />
             <span className="sr-only">Settings</span>
           </Button>
         </div>
