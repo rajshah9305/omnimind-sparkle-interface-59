@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -172,6 +173,34 @@
   
   .shimmer::before {
     @apply content-[''] absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer;
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-md bg-black/30 border border-white/10 shadow-lg;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .rose-pattern-dark {
+    background-image: url('/rose-background-dark.png');
+    @apply bg-cover bg-center bg-fixed;
+  }
+  
+  .rose-pattern-light {
+    background-image: url('/rose-background-light.png');
+    @apply bg-cover bg-center bg-fixed;
+  }
+  
+  .glow-text {
+    @apply text-white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  
+  .glow-border {
+    @apply border border-white/30;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5), inset 0 0 8px rgba(255, 255, 255, 0.3);
   }
 }
 

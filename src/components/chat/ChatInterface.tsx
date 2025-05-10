@@ -112,16 +112,16 @@ const ChatInterface: React.FC = () => {
   return (
     <div className="chat-container relative">
       {/* Header */}
-      <div className="p-4 border-b border-gray-200 bg-white flex justify-between items-center">
+      <div className="p-4 border-b border-white/10 bg-black/50 backdrop-blur-md flex justify-between items-center">
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-          <h2 className="font-medium">OmniMind Assistant</h2>
+          <h2 className="font-medium text-white">OmniMind Assistant</h2>
         </div>
         <div className="flex gap-2">
           <Button
             variant="ghost"
             size="icon"
-            className="h-8 w-8 text-gray-500 hover:text-omni-primary"
+            className="h-8 w-8 text-gray-300 hover:text-omni-primary"
             onClick={() => console.log('Voice output toggled')}
           >
             <Volume2 size={18} />
@@ -130,7 +130,7 @@ const ChatInterface: React.FC = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="h-8 w-8 text-gray-500 hover:text-omni-primary"
+            className="h-8 w-8 text-gray-300 hover:text-omni-primary"
             onClick={() => setShowSettings(!showSettings)}
           >
             <Settings size={18} />
@@ -142,7 +142,7 @@ const ChatInterface: React.FC = () => {
       </div>
 
       {/* Messages Area */}
-      <div className="chat-messages scrollbar-hide">
+      <div className="chat-messages scrollbar-hide bg-gradient-to-b from-black/40 to-black/60 backdrop-blur-md">
         {messages.map((msg) => (
           <ChatMessage
             key={msg.id}

@@ -18,7 +18,7 @@ const Index: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-omni-accent">
             Meet OmniMind
           </h2>
-          <p className="text-white max-w-2xl mx-auto text-lg leading-relaxed mb-6">
+          <p className="text-white max-w-2xl mx-auto text-lg leading-relaxed mb-6 text-shadow">
             An advanced AI assistant that understands text, voice, and images.
             Ask anything, share your thoughts, or upload images for analysis.
           </p>
