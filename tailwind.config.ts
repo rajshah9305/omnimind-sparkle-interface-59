@@ -182,6 +182,7 @@ export default {
                 'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
                 'roses-dark': "url('/rose-background-dark.png')",
                 'roses-light': "url('/rose-background-light.png')",
+                'main-background': "url('/lovable-uploads/8e2cd594-2f0e-478d-b846-e72c4c23cf52.png')",
             },
 		}
 	},
